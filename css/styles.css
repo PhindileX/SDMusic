@@ -10,6 +10,73 @@ main {
     text-align: center;
 }
 
+.topnav {
+    overflow: hidden;
+    background-color: black;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: white;
+    border-color: #4CAF50;
+}
+
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
+    background-color: black;
+    border: 2px solid #4c56af;
+    padding: 14px 16px;
+}
+
+.upload-button {
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 15px;
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+        border-color: white;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .topnav.responsive {
+        position: relative;
+    }
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
 .upload-header {
     width: 150px;
     height: 150px;
@@ -19,7 +86,7 @@ main {
 }
 
 .upload-header-text {
-    margin: 25% auto;
+    margin: 15% auto;
     text-align: center;
     font-size: 75px;
 }
